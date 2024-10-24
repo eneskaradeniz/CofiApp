@@ -22,6 +22,12 @@ Clean architecture is a software design that suggests dependencies in the applic
 ### Domain
 This layer contains all entities, value objects, enums, interfaces, and domain-specific business logic. It does not depend on any other layer in the system.
 
+In this project, **Domain-Driven Design (DDD)** principles are applied, which focus on encapsulating business rules and logic within the domain itself. The project also follows a **Rich Domain Model** approach, moving away from the **Anemic Domain Model**, to ensure that business logic is directly embedded in entities and value objects.
+
+Additionally, **Strongly Typed IDs** are used to improve type safety and prevent ID-related bugs, ensuring that each entity is identified with specific, strongly typed value objects rather than primitive data types.
+
+The project also implements **Domain Events** to decouple different parts of the domain logic, allowing various parts of the system to react to changes within the domain in a flexible and scalable way.
+
 ### Contracts
 Used to reduce dependency between layers. It includes data structures like DTOs, request-response models, which are used for communication between the Application layer.
 
